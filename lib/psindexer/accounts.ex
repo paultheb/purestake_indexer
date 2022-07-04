@@ -5,7 +5,7 @@ defmodule PsIndexer.Accounts do
   def get(params \\ []) do
     options = [params: params]
     get("/v2/accounts", [], options)
-    |> extract_body_as_map!()
+    |> extract_body_as_map!
   end
 
 end

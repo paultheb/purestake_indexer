@@ -9,7 +9,7 @@ defmodule PsIndexer.Assets do
     options = [params: params]
 
     PsIndexer.get(@endpoint, [], options)
-    |> extract_body_as_map!()
+    |> extract_body_as_map!
   end
 
 end

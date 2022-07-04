@@ -6,7 +6,7 @@ defmodule PsIndexer.Applications do
   def get(params \\ []) do
     options = [params: params]
     get("/v2/applications", [], options)
-    |> extract_body_as_map!()
+    |> extract_body_as_map!
   end
 
 end
