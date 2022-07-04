@@ -1,5 +1,5 @@
-defmodule Algoex.Indexer.Application do
-  import Algoex
+defmodule PsIndexer.Application do
+  import PsIndexer
 
   @spec get(String.t(), [HTTPoison.Base.params]) :: any # update this return type to be the right struct
   def get(application_id, params \\ []) do

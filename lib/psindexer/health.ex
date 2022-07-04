@@ -1,5 +1,5 @@
-defmodule Algoex.Indexer.Health do
-  import Algoex
+defmodule PsIndexer.Health do
+  import PsIndexer
 
   @type health_response :: %{
     "db-available": boolean(),
@@ -23,7 +23,7 @@ defmodule Algoex.Indexer.Health do
 
   ## Example
 
-  iex> Algoex.Health.get()
+  iex> PsIndexer.Health.get()
 
   ## Responses
 

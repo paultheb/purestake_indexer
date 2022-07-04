@@ -1,12 +1,12 @@
-defmodule Algoex.Indexer.Blocks do
+defmodule PsIndexer.Blocks do
 
-  import Algoex
+  import PsIndexer
 
   @endpoint "/v2/blocks/"
 
   @spec get(String.t()) :: any
   def get(round_number) do
-    Algoex.get(@endpoint <> "#{round_number}")
+    PsIndexer.get(@endpoint <> "#{round_number}")
     |> extract_body_as_map
   end
 

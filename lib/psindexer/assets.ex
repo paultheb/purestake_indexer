@@ -1,6 +1,6 @@
-defmodule Algoex.Indexer.Assets do
+defmodule PsIndexer.Assets do
 
-  import Algoex
+  import PsIndexer
 
   @endpoint "/v2/assets"
 
@@ -14,7 +14,7 @@ defmodule Algoex.Indexer.Assets do
   def get(params \\ []) do
     options = [params: params]
 
-    Algoex.get(@endpoint, [], options)
+    PsIndexer.get(@endpoint, [], options)
     |> extract_body_as_map()
   end
 

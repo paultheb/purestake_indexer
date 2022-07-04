@@ -1,5 +1,5 @@
-defmodule Algoex.Indexer.Accounts do
-  import Algoex
+defmodule PsIndexer.Accounts do
+  import PsIndexer
 
   @spec get([HTTPoison.Base.params]) :: any # update this return type to be the right struct
   def get(params \\ []) do

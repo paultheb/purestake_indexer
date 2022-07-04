@@ -1,8 +1,8 @@
-defmodule Algoex do
+defmodule PsIndexer do
   use HTTPoison.Base
 
   @endpoint "https://testnet-algorand.api.purestake.io/idx2"
-  @api_key Application.fetch_env!(:algoex, :api_key)
+  @api_key Application.fetch_env!(:psindexer, :api_key)
 
   @moduledoc """
   Documentation for `Algoex`.
