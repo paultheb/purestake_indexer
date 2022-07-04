@@ -4,18 +4,12 @@ defmodule PsIndexer.Assets do
 
   @endpoint "/v2/assets"
 
-  @type response :: %{
-    "next-token": String.t(),
-    assets: [],
-    "current-round": integer
-  }
-
-  @spec get([HTTPoison.Base.params]) :: response
+  @spec get([HTTPoison.Base.params]) :: any
   def get(params \\ []) do
     options = [params: params]
 
     PsIndexer.get(@endpoint, [], options)
-    |> extract_body_as_map()
+    |> extract_body_as_map!()
   end
 
 end

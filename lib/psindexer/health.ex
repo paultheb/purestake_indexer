@@ -1,19 +1,6 @@
 defmodule PsIndexer.Health do
   import PsIndexer
 
-  @type health_response :: %{
-    "db-available": boolean(),
-    data: %{
-      "migration-required": boolean(),
-      "read-only-mode": boolean()
-    },
-    round: integer(),
-    message: String.t(),
-    "is-migrating": boolean(),
-    version: String.t(),
-    errors: []
-  }
-
   @moduledoc """
   Health for the PureStake Indexer API.
   """
@@ -50,7 +37,7 @@ defmodule PsIndexer.Health do
 
   """
 
-  @spec get :: health_response
-  def get, do: get("/health") |> extract_body_as_map
+  @spec get :: any
+  def get, do: get("/health") |> extract_body_as_map!
 
 end

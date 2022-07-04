@@ -7,7 +7,7 @@ defmodule PsIndexer.Blocks do
   @spec get(String.t()) :: any
   def get(round_number) do
     PsIndexer.get(@endpoint <> "#{round_number}")
-    |> extract_body_as_map
+    |> extract_body_as_map!
   end
 
 end
