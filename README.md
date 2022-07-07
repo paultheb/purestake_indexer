@@ -1,30 +1,17 @@
-# Algoex
+# PureStake Indexer
 
-Elixir API wrapper for the Algorand PureStake APIs (Indexer and Algod).
+Elixir API wrapper for the Algorand PureStake Indexer API.
 
-*This is very very new and a WIP - something like v0.0.1*
+Currently a WIP
 
-**Note: Currently only supports the Indexer API.**
-
-TODO:
-- Add in relevant spec / typespec / types
-- Add in relevant docs
-- Reference [library guidelines](https://hexdocs.pm/elixir/master/library-guidelines.html) and make sure everything is good.
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `algoex_index` to your list of dependencies in `mix.exs`:
+Will need to add the following config:
 
 ```elixir
-def deps do
-  [
-    {:algoex_index, "~> 0.1.0"}
-  ]
-end
-```
+import Config
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/algoex_index>.
+config :purestake_indexer,
+  api_key: "YOUR PURESTAKE API KEY"
+
+import_config "#{config_env()}.exs"
+```
 
