@@ -1,6 +1,4 @@
-defmodule PsIndexer.Assets do
-
-  import PsIndexer
+defmodule PureStakeIndexer.Assets do
 
   @endpoint "/v2/assets"
 
@@ -8,8 +6,7 @@ defmodule PsIndexer.Assets do
   def get(params \\ []) do
     options = [params: params]
 
-    PsIndexer.get(@endpoint, [], options)
-    |> extract_body_as_map!
+    PureStakeIndexer.get(@endpoint, [], options)
   end
 
 end

@@ -1,5 +1,5 @@
-defmodule PsIndexer.Health do
-  import PsIndexer
+defmodule PureStakeIndexer.Health do
+  import PureStakeIndexer
 
   @moduledoc """
   Health for the PureStake Indexer API.
@@ -10,7 +10,7 @@ defmodule PsIndexer.Health do
 
   ## Example
 
-  iex> PsIndexer.Health.get()
+  iex> PureStakeIndexer.Health.get()
 
   ## Responses
 
@@ -38,6 +38,6 @@ defmodule PsIndexer.Health do
   """
 
   @spec get :: any
-  def get, do: get("/health") |> extract_body_as_map!
+  def get, do: get("/health")
 
 end
