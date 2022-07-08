@@ -2,7 +2,9 @@
 
 Elixir API wrapper for the Algorand PureStake Indexer API.
 
-Currently a WIP
+Currently a WIP, needs:
+- Tests
+- Docs
 
 Will need to add the following config:
 
