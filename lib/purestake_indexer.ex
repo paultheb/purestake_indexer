@@ -7,7 +7,7 @@ defmodule PureStakeIndexer do
   @type response :: {:ok, HTTPoison.Response.t()}
 
   @moduledoc """
-  API wrapper for the PureStake Algorand Indexer API.
+  API wrapper for the PureStake Algorand Indexer.
 
   Indexer Testnet v2.11.1
   """
@@ -16,9 +16,10 @@ defmodule PureStakeIndexer do
   @spec to_map!(response()) :: %{}
   def to_map!(http_response), do: http_response |> elem(1) |> Map.get(:body)
 
-  # HTTPoison Overrides
+  @doc "HTTPoison.Base override for process_url/1"
   def process_url(url), do: @endpoint <> url
 
+  @doc "HTTPoision.Base override for process_request_headers/1"
   def process_request_headers(headers) do
     [
       {"x-api-key", "#{@api_key}"},
@@ -27,6 +28,7 @@ defmodule PureStakeIndexer do
     ]
   end
 
+  @doc "HTTPoision.Base override for process_response_body/1"
   def process_response_body(body), do: Jason.decode!(body)
 
 end
