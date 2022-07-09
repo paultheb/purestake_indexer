@@ -1,7 +1,11 @@
 defmodule PureStakeIndexer.SwaggerJson do
   import PureStakeIndexer
 
-  @spec get() :: any # update this return type to be the right struct
+  @moduledoc """
+  Handles request to get the swagger JSON for the Indexer API.
+  """
+
+  @spec get() :: PureStakeIndexer.response()
   def get(), do: get("/swagger.json")
 
 end

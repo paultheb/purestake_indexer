@@ -30,7 +30,7 @@ defmodule PureStakeIndexer.Health do
 
   """
 
-  @spec get :: any
+  @spec get :: PureStakeIndexer.response()
   def get, do: get("/health")
 
 end
