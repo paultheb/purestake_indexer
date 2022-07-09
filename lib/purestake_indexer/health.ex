@@ -2,7 +2,7 @@ defmodule PureStakeIndexer.Health do
   import PureStakeIndexer
 
   @moduledoc """
-  Health for the PureStake Indexer API.
+  Handles request to get all current health of the Indexer API.
   """
 
   @doc """
@@ -26,13 +26,6 @@ defmodule PureStakeIndexer.Health do
           "message" => "22461750",
           "round" => 22461750,
           "version" => "2.11.1"
-        }
-
-  ### 403 Response
-
-        %{
-          "data" => String.t(),
-          "message" => String.t()
         }
 
   """
