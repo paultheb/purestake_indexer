@@ -10,6 +10,8 @@ defmodule PureStakeIndexer do
   API wrapper for the PureStake Algorand Indexer.
 
   Indexer Testnet v2.11.1
+
+  PureStake Indexer API Documentation: https://developer.purestake.io/apis
   """
 
   @doc "Returnns the HTTPoison.Response body as a map."
